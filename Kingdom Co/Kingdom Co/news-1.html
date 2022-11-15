@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radianite is safe for environment, Kingdom.Co can guarantee.</title>
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #151515   ;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0vw 3vw;
+            height: 6vw;
+            position: fixed;
+            top: 0;
+            width: 95vw;
+        }
+
+        .menu {
+            display: flex;
+            font-size: 1.3vw;
+        }
+
+        .menu li a {
+            padding: 1vw 3vw;
+            cursor: pointer;
+            border-radius: 1vw;
+        }
+
+        header .menu li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        header .menu li a:hover {
+            background-color: white;
+            border-radius: 1vw;
+            transition: all ease-in-out 0.5s;
+            color: black;
+        }
+
+        header .menu li {
+            list-style: none;
+            padding: 1vw 0.5vw;
+        }
+
+        header .menu .dropdown {
+            display: none;
+        }
+
+        header ul li:hover .dropdown {
+            display: block;
+            position: absolute;
+            margin-top: 1vw;
+            padding: 0.5vw;
+            border-radius: 1vw;
+            background-color: rgba(255, 255, 255, .15);  
+            backdrop-filter: blur(5px);
+            transition: all ease-in-out 0.3s;
+        }
+
+        .brand {
+            font-size: 2vw;
+            color: white;
+        }
+
+        .img {
+            width: 854px;
+            height: 480px;
+            padding-top: 10vw;
+        }
+
+        .date {
+            color: white;
+            margin-left: 12.7vw;
+            margin-top: 3vw;
+            font-size: 2vw;
+        }
+
+        .title {
+            color: white;
+            font-size: 4vw;
+            margin-left: 12.7vw;
+            margin-right: 12.7vw;
+        }
+
+        .main {
+            color: white;
+            margin-left: 12.7vw;
+            margin-right: 12.7vw;
+            margin-top: 6vw;
+            margin-bottom: 10vw;
+        }
+
+        @media (orientation: portrait) and (max-width: 480px) {
+            .img {
+                width: 320px;
+                height: 180px;
+                padding-top: 15vw;
+            }
+
+            .date {
+                font-size: 3vw;
+                margin-left: 8vw;
+            }
+
+            .title {
+                font-size: 5vw;
+                margin-left: 8vw;
+                margin-right: 8vw;
+            }
+
+            .main {
+                margin-left: 8vw;
+                margin-right: 8vw;
+                font-size: 3vw;
+            }
+        }
+
+        @media (orientation: portrait) and (max-width: 1024px) and (min-width: 480px){
+            .img {
+                width: 640px;
+                height: 360px;
+                padding-top: 13vw;
+            }
+
+            .date {
+                font-size: 3vw;
+                margin-left: 11vw;
+            }
+
+            .title {
+                font-size: 5vw;
+                margin-left: 11vw;
+                margin-right: 11vw;
+            }
+
+            .main {
+                margin-left: 11vw;
+                margin-right: 11vw;
+                font-size: 3vw;
+            }
+        }
+    </style>
+    <script>
+         window.onscroll = function() {myFunction()};
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+        }
+    </script>
+</head>
+<body bgcolor="#151515">
+    <header id="myheader">
+        <div class="brand">
+            <h1>KINGDOM Co.</h1>
+        </div>
+        <ul class="menu">
+            <li><a href="kingdom-website.html">Home</a></li>
+            <li><a href="kingdom-news.html">News</a></li>
+            <li>
+                <a>Our Social</a>
+                <ul class="dropdown">
+                    <li><a href="https://www.instagram.com/playvalorantofficial/">Instagram</a></li>
+                    <li><a href="https://twitter.com/PlayVALORANT?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <center><img class="img" src="The_Radianite_Experiment 1.png"></center>
+    <p class="date">25 September 2050</p>
+    <h1 class="title">Radianite is safe for environment, Kingdom.Co can guarantee.</h1>
+    <p class="main">
+        The safety and feasibility of Radianite is questionable. Now KINGDOM Corporation has announce that 
+        Radianite is safe for environment, Arthur Kingdom CEO of KINGDOM Corporation say that Radianite is 
+        completely safe and Radianite never ever cause death, Arthur say that in International Technology 
+        Conference 2051. Arthur can make sure another leader that Radianite is safe. now poeple around 
+        the world doesnt need panic because KINGDOM Corporation can take care this.<br><br>
+
+        in other case other people heard rumors that Radianite have impact to bad health, but once again Kingdom guarantee 
+        that Radianite is 100% safe, 100% safe for health, and 100% safe for environment. KINGDOM Corporation 
+        can guarantee that 100%.
+    </p>
+</body>
+</html>
