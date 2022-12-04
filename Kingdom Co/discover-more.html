@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kingdom co.</title>
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #151515;
+        }
+
+        header {
+            background-color: #151515;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0vw 3vw;
+            height: 6vw;
+            position: fixed;
+            top: 0;
+            width: 95vw;
+        }
+
+        .menu {
+            display: flex;
+            font-size: 1.3vw;
+        }
+
+        .menu li a {
+            padding: 1vw 3vw;
+            cursor: pointer;
+            border-radius: 1vw;
+        }
+
+        header .menu li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        header .menu li a:hover {
+            background-color: white;
+            border-radius: 1vw;
+            transition: all ease-in-out 0.5s;
+            color: black;
+        }
+
+        header .menu li {
+            list-style: none;
+            padding: 1vw 0.5vw;
+        }
+
+        header .menu .dropdown {
+            display: none;
+        }
+
+        header ul li:hover .dropdown {
+            display: block;
+            text-align: center;
+            background-color: transparent;
+            position: absolute;
+            margin-top: 1vw;
+            padding: 0.5vw;
+            border-radius: 1vw;
+            background-color: rgba(255, 255, 255, .15);  
+            backdrop-filter: blur(5px);
+            transition: all ease-in-out 0.3s;
+        }
+
+        .brand {
+            font-size: 2vw;
+            color: white;
+        }
+
+        .font2 {
+            text-align: center;
+            font-size: 4vw;
+            color: white;
+            margin-top: 17vw;
+            margin-bottom: 17vw;
+            padding-top: 5vw;
+        }
+
+        .font3 {
+            text-align: center;
+            font-size: 4vw;
+            color: white;
+        }
+
+        .font4 {
+            font-size: 1.5vw;
+            color: white;
+            margin-left: 16vw;
+            margin-right: 16vw;
+        }
+
+        .font5 {
+            font-size: 1.5vw;
+            color: white;
+            margin-left: 17vw;
+            margin-right: 17vw;
+        }
+
+        .image {
+            width: 640px;
+            height: 360px;
+        }
+
+        .img {
+            width: 30vw;
+            height: 30vw;
+        }
+
+        .img2 {
+            width: 50vw;
+            height: 28vw;
+            border-radius: 10px;
+        }
+
+        .kingdom {
+            font-size: 3vw;
+            color: white;
+            text-align: center;
+        }
+
+        .firstlight {
+            color: white;
+            font-size: 3vw;
+            text-align: center;
+            margin-top: 15vw;
+        }
+
+        .stepbystep {
+            color: white;
+            margin-top: 68vw;
+            text-align: center;
+        }
+
+        .capturedflv {
+            color: white;
+            text-align: center;
+            margin-bottom: 10vw;
+        }
+
+        @media (orientation: portrait) and (max-width: 480px) {
+            header {
+                height: 10vw;
+            }
+
+            .menu {
+                font-size: 2vw;
+            }
+
+            .brand {
+                font-size: 3vw;
+            }
+
+            .font2 {
+                margin-top: 70vw;
+                margin-bottom: 70vw;
+                font-size: 8vw;
+            }
+
+            .kingdom {
+                font-size: 5vw;
+            }
+
+            .font5 {
+                font-size: 3vw;
+            }
+
+            .font3 {
+                font-size: 5vw;
+                margin-top: 25vw;
+            }
+
+            .font4 {
+                font-size: 3vw;
+            }
+
+            .firstlight {
+                font-size: 5vw;
+            }
+
+            .font5 {
+                font-size: 3vw;
+            }
+
+            .stepbystep {
+                font-size: 2vw;
+            }
+
+            .capturedflv {
+                font-size: 2vw;
+            }
+        }
+
+        @media (orientation: portrait) and (max-width: 1024px) and (min-width: 480px) {
+            header {
+                height: 10vw;
+            }
+
+            .menu {
+                font-size: 2vw;
+            }
+
+            .brand {
+                font-size: 3.2vw;
+            }
+
+            .font2 {
+                margin-top: 45vw;
+                margin-bottom: 45vw;
+                font-size: 8vw;
+            }
+
+            .kingdom {
+                font-size: 5vw;
+            }
+
+            .font5 {
+                font-size: 3vw;
+            }
+
+            .font3 {
+                font-size: 5vw;
+                margin-top: 25vw;
+            }
+
+            .font4 {
+                font-size: 3vw;
+            }
+
+            .firstlight {
+                font-size: 5vw;
+            }
+
+            .font5 {
+                font-size: 3vw;
+            }
+
+            .stepbystep {
+                font-size: 2vw;
+            }
+
+            .capturedflv {
+                font-size: 2vw;
+            }
+        }
+    </style>
+    <script>
+        window.onscroll = function() {myFunction()};
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <h1>KINGDOM Co.</h1>
+        </div>
+        <ul class="menu">
+        <li><a href="kingdom-website.html">Home</a></li>
+        <li><a href="kingdom-news.html">News</a></li>
+            <li>
+                <a>Our Social</a>
+                <ul class="dropdown">
+                    <li><a href="https://www.instagram.com/playvalorantofficial/">Instagram</a></li>
+                    <li><a href="https://twitter.com/PlayVALORANT?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <!--somemaybemotivationwordiguess-->
+    <h1 class="font2">With Radianite, We believe that<br>we can build our world more better</h1>
+    <!--kingdom.co-->
+    <h1 class="kingdom">Who is Kingdom Corporation?</h1>
+    <p class="font5">Some people don't know about Kingdom Co. and who are they, so we are here to explain who is Kingdom Co.</p>
+    <p class="font5" style="margin-bottom: 15vw;">Kingdom.Co is a corporation that manage Radianite in the world. we headere been able to make huge scientific advancements, including new methods for how the planet produces its energy. Kingdom.Co produce an immense amount of energy, and would end up producing enough to provide for three quarter's our energy needs.</p>
+    <!--radianite-->
+    <h1 class="font3">What is Radianite?</h1>
+    <p class="font4" style="margin-bottom: 2vw;">Some people asking what is radianite?, Let us explain. Radianite is an unknown material that come out from an event that change our life which name is First Light.</p>
+    <p class="font4" style="margin-bottom: 2vw;">Radianite extracted from mine and then processed and put in the Radianite Box. Radianite is clean, safe source energy, and renewable energy.</p>
+    <p class="font4" style="margin-bottom: 2vw;">Exposure to radiation for a long time was reported to result in "unusual feats of strength" in affected people. In other cases, it could inflict more permanent supernatural abilities upon certain people, who would become known as Radiants.</p>
+    <p class="font4" style="margin-bottom: 2vw;">Radianite has been used to power and augment much of the Earths' technology since its discovery. Some devices require a Radi-Core, a cube that contains solid radianite, to be powered. A Radi-Core can be super-heated to liquefy the radianite inside, which will cause it to generate even more power. Radianite technology also offers a multitude of "space faring opportunities".</p>
+    <p class="font4" style="margin-bottom: 2vw;">Radianite is capable of generating enormous amounts of energy, and through the Kingdom Radianite Power Program, we are responsible for powering more than 3/4 of the world. Radianite is also used on a smaller scale to power everyday equipment, in the form of Radi-Core to large ones called Radianite power plants.</p>
+    <img class="img" style="margin-left: 12vw;" align="left" src="radianite.png">
+    <img class="img" style="margin-right: 12vw;" align="right" src="another radianite.png">
+    <img class="img" style="margin-left: 12vw;" align="left" src="radianite 2.png">
+    <img class="img" style="margin-right: 12vw;" align="right" src="bunch of radianite boxes.png">
+    <p class="stepbystep">step by step how radianite is processed</p>
+    <!--firstlight-->
+    <h1 class="firstlight">What is First Light?</h1>
+    <p class="font5">Some people asking what is First Light?, Well that's maybe we are here so let us explain what it First Light.</p>
+    <p class="font5" style="margin-bottom: 50px;">First Light is an a mysterious event that spanned the entirety in our world. The event spanned the entire of both globes, leading to big transformations to life, technology, and how governments operate. However, select people also started to gain abilities stemming from this massive event. These gifted individuals were called Radiants.</p>
+    <img class="img2" src="Screenshot (410).png" style="display:block; margin:auto;" width="640" height="360">
+    <p class="capturedflv">Captured a First Light Event</p>
+</body>
+</html>
