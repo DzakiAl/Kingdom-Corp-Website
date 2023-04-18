@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radianite is safe for environment, Kingdom Co. can guarantee.</title>
+    <link rel="icon" type="image/x-icon" href="Kingdom Corp logo.png">
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #151515;
+        }
+
+        header {
+            background-color: #151515;  
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0vw 3vw;
+            height: 6vw;
+            position: fixed;
+            top: 0;
+            width: 98%;
+        }
+
+        .menu {
+            display: flex;
+            font-size: 1.3vw;
+        }
+
+        .menu li a {
+            padding: 1vw 2vw;
+            cursor: pointer;
+            border-radius: 0.5vw;
+        }
+
+        header .menu li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            transition: 0.5s ease;
+        }
+
+        header .menu li a:hover {
+            background-color: white;
+            border-radius: 0.5vw;
+            transition: all ease-in-out 0.5s;
+            color: black;
+        }
+
+        header .menu li {
+            list-style: none;
+            padding: 1vw 0.5vw;
+        }
+
+        .brand {
+            font-size: 4vw;
+            color: white;
+        }
+
+        .img {
+            width: 73vw;
+            height: 45vw;
+            padding-top: 10vw;
+        }
+
+        .date {
+            color: white;
+            margin-left: 12.7vw;
+            margin-top: 3vw;
+            font-size: 2vw;
+        }
+
+        .title {
+            color: white;
+            font-size: 4vw;
+            margin-left: 12.7vw;
+            margin-right: 12.7vw;
+        }
+
+        .main {
+            color: white;
+            margin-left: 12.7vw;
+            margin-right: 12.7vw;
+            margin-top: 6vw;
+            margin-bottom: 10vw;
+        }
+
+        footer {
+            background-color: black;
+            width: 100%;
+            height: 10vw;
+        }
+
+        .link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            font-size: 1.2vw;
+        }
+
+        .link2 {
+            color: white; 
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .link2:hover {
+            text-decoration: underline;
+        }
+
+        body {
+            animation: Fadein 1.5s;
+        }
+
+        @keyframes Fadein {
+            from {
+                opacity: 0;
+            }to {
+                opacity: 1;
+            }
+        }
+
+        .copyright {
+            font-size: 1.2vw;
+            color: white;
+            margin-right: 3vw;
+        }
+
+        @media (orientation: portrait) and (max-width: 480px) {
+            header {
+                height: 10vw;
+            }
+
+            .menu {
+                font-size: 2vw;
+            }
+
+            .brand {
+                font-size: 5vw;
+            }
+
+            .img {
+                width: 84vw;
+                height: 45vw;
+                padding-top: 15vw;
+            }
+
+            .date {
+                font-size: 3vw;
+                margin-left: 8vw;
+            }
+
+            .title {
+                font-size: 5vw;
+                margin-left: 8vw;
+                margin-right: 8vw;
+            }
+
+            .main {
+                margin-left: 8vw;
+                margin-right: 8vw;
+                font-size: 3vw;
+            }
+
+            footer {
+                height: 25vw;
+                margin-top: 10vw;
+            }
+
+            .link2 {
+                font-size: 3vw;
+            }
+
+            .copyright {
+                font-size: 3vw;
+            }
+        }
+
+        @media (orientation: portrait) and (max-width: 1024px) and (min-width: 480px){
+            header {
+                height: 10vw;
+                padding: 0 1vw;
+            }
+
+            .menu {
+                font-size: 2vw;
+            }
+
+            .brand {
+                font-size: 5vw;
+            }
+
+            .img {
+                width: 78vw;
+                height: 42vw;
+                padding-top: 13vw;
+            }
+
+            .date {
+                font-size: 3vw;
+                margin-left: 11vw;
+            }
+
+            .title {
+                font-size: 5vw;
+                margin-left: 11vw;
+                margin-right: 11vw;
+            }
+
+            .main {
+                margin-left: 11vw;
+                margin-right: 11vw;
+                font-size: 3vw;
+            }
+
+            footer {
+                height: 25vw;
+                margin-top: 10vw;
+            }
+
+            .link2 {
+                font-size: 3vw;
+            }
+
+            .copyright {
+                font-size: 3vw;
+            }
+        }
+    </style>
+    <script>
+         window.onscroll = function() {myFunction()};
+
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+        }
+    </script>
+</head>
+<body>
+    <header id="myheader">
+        <div class="brand">
+            <a href="kingdom-website.html" style="color: white; text-decoration: none; font-weight: 700;">KINGDOM Co.</a>
+        </div>
+        <ul class="menu">
+            <li><a href="Radianite.html">Radianite</a></li>
+            <li><a href="first-light.html">First Light</a></li>
+            <li><a href="kingdom-news.html">News</a></li>
+            <li><a href="who-is-kng.html">Who is KNG</a></li>
+        </ul>
+    </header>
+    <center><img class="img" src="The_Radianite_Experiment 1.png"></center>
+    <p class="date">25 September 2050</p>
+    <h1 class="title">Radianite is safe for environment, Kingdom Co. can guarantee.</h1>
+    <p class="main">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sit amet metus et lectus sagittis malesuada sed
+        bibendum odio. Nullam est metus, semper sit amet suscipit at, porttitor nec augue. Aenean molestie, metus nec
+        lacinia pretium, orci nibh pharetra justo, non porta nisi nunc vitae odio. Integer consectetur porttitor velit,
+        eu rutrum libero. In auctor auctor arcu, eu iaculis leo sollicitudin sit amet. Nulla metus erat, ultrices a
+        bibendum vitae, tristique a ante. Integer ut lobortis sapien, sed euismod augue. Maecenas malesuada orci at nisl
+        volutpat imperdiet. Sed cursus ornare felis in mattis.<br><br>
+
+        Sed dapibus varius massa cursus finibus. Mauris et lobortis dui, et dignissim lectus. Praesent facilisis libero
+        sit amet elementum pharetra. Pellentesque tempus tincidunt elementum. Proin mi nulla, bibendum elementum sem at,
+        pellentesque blandit purus. Ut tristique sollicitudin dui, a mattis enim gravida vel. In id nulla at nibh
+        consectetur scelerisque at at augue. Maecenas tempor mauris eu venenatis fermentum. Mauris a felis ut ligula
+        sodales iaculis quis vel tortor. Phasellus vel maximus quam. Nunc semper sem bibendum lectus tincidunt, a
+        tincidunt ante ultricies.<br><br>
+
+        Donec molestie ligula odio, nec euismod risus dictum ac. Etiam auctor mollis erat nec ullamcorper. Maecenas
+        faucibus nec erat malesuada pellentesque. Sed eu elit auctor, cursus nunc vestibulum, dapibus ante. Nulla eu
+        erat leo. Vestibulum lobortis in turpis eu maximus. Sed vitae faucibus risus, finibus gravida tellus. Sed
+        posuere in ligula eget auctor. Maecenas ornare odio id molestie finibus.<br><br>
+
+        Vivamus sed dignissim massa. Donec id accumsan justo, a vulputate lorem. Praesent eleifend nisi eget nibh
+        imperdiet, id aliquam velit volutpat. Vestibulum pretium, ex id ultricies maximus, lectus ex volutpat est, sit
+        amet ultrices lacus ante nec quam. Pellentesque eleifend diam sem, vel posuere elit vestibulum non. Nulla
+        facilisi. Nam sed magna nisl. Mauris sit amet malesuada massa, tincidunt semper libero. Vivamus venenatis velit
+        tellus, id vestibulum nunc tincidunt id. Curabitur lobortis ultrices tellus, quis euismod libero porta ut. Morbi
+        euismod ultrices sapien. Curabitur sagittis enim sed eros pharetra elementum. Pellentesque vitae ex ullamcorper
+        elit ornare pulvinar. Nunc ullamcorper neque arcu, non pretium elit euismod quis. Fusce aliquam libero lacus,
+        lobortis consectetur libero hendrerit eget. Aenean eu nulla in tortor vulputate tempor.<br><br>
+
+        Sed vel sapien nec tortor cursus egestas ultricies eu quam. Praesent luctus euismod nisl ultricies ullamcorper.
+        Fusce non blandit massa, id commodo erat. Cras sit amet nisi odio. In sodales condimentum libero sed consequat.
+        Nulla posuere est nulla, eget fermentum ipsum cursus eget. Suspendisse nec suscipit libero. Proin et odio
+        faucibus, convallis quam et, tincidunt lorem. Morbi tempus dui sem, eget rutrum turpis pharetra quis. In at
+        luctus metus, ut pharetra augue. Mauris rhoncus massa et libero congue, ut finibus magna sagittis. Interdum et
+        malesuada fames ac ante ipsum primis in faucibus. Ut sapien diam, sollicitudin nec venenatis vitae, elementum
+        quis ipsum. In sit amet iaculis lacus. Duis erat augue, ullamcorper ut ornare sed, tristique vel lorem. In
+        tincidunt venenatis magna, ut ullamcorper augue.<br><br>
+    </p>
+    <footer>
+        <div class="link">
+            <p class="copyright">KINGDOM Co. © 2052</p>
+            <a class="link2" href="https://www.facebook.com/PlayVALORANT/">Facebook</a>
+            <a class="link2" href="https://www.instagram.com/playvalorantofficial/" style="margin-left: 3vw; margin-right: 3vw;">Instagram</a>
+            <a class="link2" href="https://twitter.com/PlayVALORANT?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter</a>
+        </div>
+    </footer>
+</body>
+</html>
