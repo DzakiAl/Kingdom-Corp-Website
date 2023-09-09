@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updates</title>
+    <link rel="icon" type="image/x-icon" href="Images/Kingdom Logo.png">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            animation: fade-in 1s ease-in-out;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        nav {
+            display: flex;
+            width: 100%;
+            height: 6vw;
+            background-color: transparent;
+            position: fixed;
+            top: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .brand {
+            color: white;
+            font-size: 4vw;
+            text-decoration: none;
+            margin: 1vh 0 1vh 2vw;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 2%;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5vw;
+            margin-left: 1vw;
+            position: relative;
+        }
+
+        .menu a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0.15vw;
+            background-color: white;
+            transition: width 0.3s;
+        }
+
+        .menu a:hover::before {
+            width: 100%;
+        }
+
+        .title {
+            font-size: 5vw;
+            margin: 45vh 0 45vh 0;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+        }
+
+        .updates {
+            padding: 20vh 10% 20vh 10%;
+        }
+
+        .updates p {
+            margin: 0;
+        }
+
+        .updates img {
+            width: 100%;
+        }
+
+        .date {
+            padding: 2.5vh 0 0 0;
+            font-size: 2vw;
+        }
+
+        footer {
+            background-color: black;
+            width: 100%;
+            height: 10vw;
+        }
+
+        .link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            font-size: 1.2vw;
+        }
+
+        .link2 {
+            color: white; 
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .link2:hover {
+            text-decoration: underline;
+        }
+
+        .copyright {
+            font-size: 1.2vw;
+            color: white;
+            margin-right: 3vw;
+        }
+
+        @media (orientation: portrait) and (max-width: 480px) {
+            .navbar {
+                height: 9vw;
+            }
+
+            .brand {
+                font-size: 6vw;
+                margin: 1.5% 1.5% 5%;
+            }
+
+            .menu {
+                margin-right: 2%;
+            }
+
+            .menu a {
+                font-size: 3vw;
+            }
+
+            .title {
+                font-size: 10vw;
+                margin: 46vh 0 49vh 0;
+            }
+
+            .updates {
+                padding: 5vh 10% 10vh 10%;
+            }
+
+            .updates img {
+                width: 100%;
+            }
+
+            .date {
+                font-size: 3vw;
+            }
+
+            footer {
+                height: 25vw;
+            }
+
+            .link2 {
+                font-size: 3vw;
+            }
+
+            .copyright {
+                font-size: 3vw;
+            }
+        }
+
+        @media (orientation: portrait) and (max-width: 1024px) and (min-width: 480px) {
+            nav {
+                height: 10vw;
+            }
+
+            .brand {
+                font-size: 6vw;
+                margin: 1.5% 1.5% 5%;
+            }
+
+            .menu {
+                margin-right: 1%;
+            }
+
+            .menu a {
+                font-size: 3vw;
+            }
+
+            .title {
+                font-size: 13vw;
+                margin: 46vh 0 49vh 0;
+            }
+
+            .updates {
+                padding: 5vh 10% 10vh 10%;
+            }
+
+            .updates p {
+                font-size: 3vw;
+            }
+
+            .updates-title {
+                font-size: 5vw;
+            }
+
+            .updates img {
+                width: 100%;
+            }
+
+            .date {
+                font-size: 3vw;
+            }
+
+            footer {
+                height: 25vw;
+            }
+
+            .link2 {
+                font-size: 3vw;
+            }
+
+            .copyright {
+                font-size: 3vw;
+            }
+        }
+    </style>
+</head>
+<body background="Images/Kingdoms Tower.png">
+    <script>
+        //change navbar color while scrolling
+        window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        const content = document.querySelector('.content');
+        const scrollPos = window.scrollY;
+
+        if (scrollPos > content.offsetTop - navbar.clientHeight) {
+            navbar.style.backgroundColor = '#000000'; // Change to your desired color
+        } else {
+            navbar.style.backgroundColor = 'transparent';
+        }
+        });
+    </script>
+    <nav class="navbar">
+        <a href="index.html" class="brand"><b>KINGDOM</b></a>
+        <div class="menu">
+            <a href="about-us.html">About us</a>
+            <a href="radianite.html">Radianite</a>
+            <a href="updates.html">Updates</a>
+        </div>
+    </nav>
+    <div class="content">
+        <h1 class="title" align="center">Updates</h1>
+        <div class="container">
+            <div class="updates">
+                <img src="Images/The Radianite Experiment.png">
+                <p class="date">10 October 2050</p>
+                <h1 class="updates-title">Radianite is safe for environment, Kingdom Co. can guarantee.</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus, est id consequat
+                    dictum, sem quam mattis massa, nec tincidunt risus magna ut mauris. Ut in imperdiet neque. Nullam
+                    nec lacus euismod, semper tortor sed, ullamcorper nisl. Ut sed vulputate dolor. Aliquam erat
+                    volutpat. Etiam non metus pretium, ornare lorem ut, venenatis leo. Praesent scelerisque, lorem non
+                    mattis suscipit, arcu urna blandit erat, a euismod risus turpis nec lacus. Etiam molestie tellus ex.
+                    Nulla vitae convallis nunc, eget porta felis. Phasellus mattis ligula sed felis egestas laoreet.
+                    Nunc non venenatis dui. Maecenas non neque quis mauris sollicitudin iaculis at ut lacus.
+                </p>
+                <p>
+                    Duis gravida tortor ex, eu molestie arcu hendrerit id. Sed nec erat at nulla rhoncus efficitur.
+                    Praesent malesuada, urna eget volutpat egestas, mauris erat ornare lacus, nec venenatis orci nunc
+                    porta mauris. Nunc eget quam et mi varius pulvinar eget eu metus. Aenean lobortis efficitur nisi, in
+                    sagittis sem feugiat sit amet. Cras porta ac ex ac molestie. Suspendisse ultricies blandit tempor.
+                </p>
+                <p>
+                    Phasellus vitae felis egestas, ultricies turpis ut, fringilla mi. Mauris eget ipsum lectus.
+                    Pellentesque vitae tempor nisl, quis molestie enim. Orci varius natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. Nam eget arcu ultrices, rhoncus dui quis, convallis ex.
+                    Vivamus tempus non ligula eu convallis. Nam nec magna congue, congue nisl nec, egestas diam.
+                    Suspendisse iaculis nec urna nec consequat. Donec molestie est a elementum pharetra.
+                </p>
+                <p>
+                    Nulla facilisi. Maecenas pellentesque purus commodo enim tempus, sit amet mattis lacus condimentum.
+                    Suspendisse potenti. Sed ante justo, viverra at vulputate id, tincidunt at orci. Vivamus eros
+                    ligula, consectetur in libero nec, auctor maximus libero. Fusce volutpat massa vitae efficitur
+                    fermentum. Etiam tristique egestas cursus. Nulla facilisi. Nulla faucibus risus nibh, a faucibus
+                    lectus luctus at. Aenean sagittis metus eget sem lacinia, in consequat dui bibendum. Phasellus ut
+                    tempus tellus. Donec convallis, arcu eu convallis porttitor, lectus erat sollicitudin dui, eu
+                    volutpat leo tortor nec nunc. Nulla fringilla sagittis dictum. Aliquam non sem consectetur,
+                    condimentum lectus sit amet, elementum mauris. Quisque tortor lorem, finibus ac pretium lacinia,
+                    varius sed metus.
+                </p>
+                <hr>
+            </div>
+            <div class="updates">
+                <img src="Images/wanted radiants.png">
+                <p class="date">4 October 2050</p>
+                <h1 class="updates-title">Authorities still hunting 2 Radiants that caught in event of Vanice.</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus, est id consequat
+                    dictum, sem quam mattis massa, nec tincidunt risus magna ut mauris. Ut in imperdiet neque. Nullam
+                    nec lacus euismod, semper tortor sed, ullamcorper nisl. Ut sed vulputate dolor. Aliquam erat
+                    volutpat. Etiam non metus pretium, ornare lorem ut, venenatis leo. Praesent scelerisque, lorem non
+                    mattis suscipit, arcu urna blandit erat, a euismod risus turpis nec lacus. Etiam molestie tellus ex.
+                    Nulla vitae convallis nunc, eget porta felis. Phasellus mattis ligula sed felis egestas laoreet.
+                    Nunc non venenatis dui. Maecenas non neque quis mauris sollicitudin iaculis at ut lacus.
+                </p>
+                <p>
+                    Duis gravida tortor ex, eu molestie arcu hendrerit id. Sed nec erat at nulla rhoncus efficitur.
+                    Praesent malesuada, urna eget volutpat egestas, mauris erat ornare lacus, nec venenatis orci nunc
+                    porta mauris. Nunc eget quam et mi varius pulvinar eget eu metus. Aenean lobortis efficitur nisi, in
+                    sagittis sem feugiat sit amet. Cras porta ac ex ac molestie. Suspendisse ultricies blandit tempor.
+                </p>
+                <p>
+                    Phasellus vitae felis egestas, ultricies turpis ut, fringilla mi. Mauris eget ipsum lectus.
+                    Pellentesque vitae tempor nisl, quis molestie enim. Orci varius natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. Nam eget arcu ultrices, rhoncus dui quis, convallis ex.
+                    Vivamus tempus non ligula eu convallis. Nam nec magna congue, congue nisl nec, egestas diam.
+                    Suspendisse iaculis nec urna nec consequat. Donec molestie est a elementum pharetra.
+                </p>
+                <p>
+                    Nulla facilisi. Maecenas pellentesque purus commodo enim tempus, sit amet mattis lacus condimentum.
+                    Suspendisse potenti. Sed ante justo, viverra at vulputate id, tincidunt at orci. Vivamus eros
+                    ligula, consectetur in libero nec, auctor maximus libero. Fusce volutpat massa vitae efficitur
+                    fermentum. Etiam tristique egestas cursus. Nulla facilisi. Nulla faucibus risus nibh, a faucibus
+                    lectus luctus at. Aenean sagittis metus eget sem lacinia, in consequat dui bibendum. Phasellus ut
+                    tempus tellus. Donec convallis, arcu eu convallis porttitor, lectus erat sollicitudin dui, eu
+                    volutpat leo tortor nec nunc. Nulla fringilla sagittis dictum. Aliquam non sem consectetur,
+                    condimentum lectus sit amet, elementum mauris. Quisque tortor lorem, finibus ac pretium lacinia,
+                    varius sed metus.
+                </p>
+                <hr>
+            </div>
+            <div class="updates">
+                <img src="Images/ascent.png">
+                <p class="date">15 September 2050</p>
+                <h1 class="updates-title">CEO of Kingdom Co. say that "We don't have any connection to disaster in Vanice."</h1>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque tempus, est id consequat
+                    dictum, sem quam mattis massa, nec tincidunt risus magna ut mauris. Ut in imperdiet neque. Nullam
+                    nec lacus euismod, semper tortor sed, ullamcorper nisl. Ut sed vulputate dolor. Aliquam erat
+                    volutpat. Etiam non metus pretium, ornare lorem ut, venenatis leo. Praesent scelerisque, lorem non
+                    mattis suscipit, arcu urna blandit erat, a euismod risus turpis nec lacus. Etiam molestie tellus ex.
+                    Nulla vitae convallis nunc, eget porta felis. Phasellus mattis ligula sed felis egestas laoreet.
+                    Nunc non venenatis dui. Maecenas non neque quis mauris sollicitudin iaculis at ut lacus.
+                </p>
+                <p>
+                    Duis gravida tortor ex, eu molestie arcu hendrerit id. Sed nec erat at nulla rhoncus efficitur.
+                    Praesent malesuada, urna eget volutpat egestas, mauris erat ornare lacus, nec venenatis orci nunc
+                    porta mauris. Nunc eget quam et mi varius pulvinar eget eu metus. Aenean lobortis efficitur nisi, in
+                    sagittis sem feugiat sit amet. Cras porta ac ex ac molestie. Suspendisse ultricies blandit tempor.
+                </p>
+                <p>
+                    Phasellus vitae felis egestas, ultricies turpis ut, fringilla mi. Mauris eget ipsum lectus.
+                    Pellentesque vitae tempor nisl, quis molestie enim. Orci varius natoque penatibus et magnis dis
+                    parturient montes, nascetur ridiculus mus. Nam eget arcu ultrices, rhoncus dui quis, convallis ex.
+                    Vivamus tempus non ligula eu convallis. Nam nec magna congue, congue nisl nec, egestas diam.
+                    Suspendisse iaculis nec urna nec consequat. Donec molestie est a elementum pharetra.
+                </p>
+                <p>
+                    Nulla facilisi. Maecenas pellentesque purus commodo enim tempus, sit amet mattis lacus condimentum.
+                    Suspendisse potenti. Sed ante justo, viverra at vulputate id, tincidunt at orci. Vivamus eros
+                    ligula, consectetur in libero nec, auctor maximus libero. Fusce volutpat massa vitae efficitur
+                    fermentum. Etiam tristique egestas cursus. Nulla facilisi. Nulla faucibus risus nibh, a faucibus
+                    lectus luctus at. Aenean sagittis metus eget sem lacinia, in consequat dui bibendum. Phasellus ut
+                    tempus tellus. Donec convallis, arcu eu convallis porttitor, lectus erat sollicitudin dui, eu
+                    volutpat leo tortor nec nunc. Nulla fringilla sagittis dictum. Aliquam non sem consectetur,
+                    condimentum lectus sit amet, elementum mauris. Quisque tortor lorem, finibus ac pretium lacinia,
+                    varius sed metus.
+                </p>
+                <hr>
+            </div>
+        </div>
+    <footer>
+        <div class="link">
+            <p class="copyright">KINGDOM Co. © 2052</p>
+            <a class="link2" href="https://www.facebook.com/PlayVALORANT/">Facebook</a>
+            <a class="link2" href="https://www.instagram.com/playvalorantofficial/" style="margin-left: 3vw; margin-right: 3vw;">Instagram</a>
+            <a class="link2" href="https://twitter.com/PlayVALORANT?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter</a>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>

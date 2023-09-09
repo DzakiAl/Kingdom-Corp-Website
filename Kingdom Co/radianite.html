@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radianite</title>
+    <link rel="icon" type="image/x-icon" href="Images/Kingdom Logo.png">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            animation: fade-in 1s ease-in-out;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        nav {
+            display: flex;
+            width: 100%;
+            height: 6vw;
+            background-color: transparent;
+            position: fixed;
+            top: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .brand {
+            color: white;
+            font-size: 4vw;
+            text-decoration: none;
+            margin: 1vh 0 1vh 2vw;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 2%;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5vw;
+            margin-left: 1vw;
+            position: relative;
+        }
+
+        .menu a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0.15vw;
+            background-color: white;
+            transition: width 0.3s;
+        }
+
+        .menu a:hover::before {
+            width: 100%;
+        }
+
+        .title {
+            font-size: 5vw;
+            margin: 45vh 0 45vh 0;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+        }
+
+        .text {
+            padding: 30vh 20% 30vh 20%;
+            margin: 0;
+            font-size: 2vw;
+            text-align: center;
+        }
+
+        .slider-container {
+            padding: 20vh 0 20vh 0;
+        }
+
+        .slider img {
+            width: 30%;
+            height: 30%;
+        }
+
+        .slider-dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .dot {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            margin: 0 5px;
+            background-color: #ccc;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .dot.active {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: black;
+            width: 100%;
+            height: 10vw;
+        }
+
+        .link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            font-size: 1.2vw;
+        }
+
+        .link2 {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .link2:hover {
+            text-decoration: underline;
+        }
+
+        .copyright {
+            font-size: 1.2vw;
+            color: white;
+            margin-right: 3vw;
+        }
+
+        @media (orientation: portrait) and (max-width: 480px) {
+            .navbar {
+                height: 9vw;
+            }
+
+            .brand {
+                font-size: 6vw;
+                margin: 1.5% 1.5% 5%;
+            }
+
+            .menu {
+                margin-right: 2%;
+            }
+
+            .menu a {
+                font-size: 3vw;
+            }
+
+            .title {
+                font-size: 13vw;
+                margin: 46vh 0 49vh 0;
+            }
+
+            .text {
+                padding: 32vh 10% 32vh 10%;
+                font-size: 4vw;
+                text-align: center;
+            }
+
+            .slider-container {
+                padding: 30vh 0 32vh 0;
+            }
+
+            .slider img {
+                width: 60%;
+                height: 60%;
+            }
+
+            .slider-container p {
+                font-size: 4vw;
+            }
+
+            footer {
+                height: 25vw;
+            }
+
+            .link2 {
+                font-size: 3vw;
+            }
+
+            .copyright {
+                font-size: 3vw;
+            }
+        }
+
+        @media (orientation: portrait) and (max-width: 1024px) and (min-width: 480px) {
+            nav {
+                height: 10vw;
+            }
+
+            .brand {
+                font-size: 6vw;
+                margin: 1.5% 1.5% 5%;
+            }
+
+            .menu {
+                margin-right: 1%;
+            }
+
+            .menu a {
+                font-size: 3vw;
+            }
+
+            .title {
+                font-size: 13vw;
+                margin: 46vh 0 49vh 0;
+            }
+
+            .text {
+                padding: 28vh 10% 28vh 10%;
+                font-size: 4vw;
+                text-align: center;
+            }
+
+            .slider-container {
+                padding: 24vh 0 30vh 0;
+            }
+
+            .slider img {
+                width: 60%;
+                height: 60%;
+            }
+
+            .slider-container p {
+                font-size: 3vw;
+            }
+
+            footer {
+                height: 25vw;
+            }
+
+            .link2 {
+                font-size: 3vw;
+            }
+
+            .copyright {
+                font-size: 3vw;
+            }
+        }
+    </style>
+</head>
+<body background="Images/Kingdoms Tower.png">
+    <script>
+        //change navbar color while scrolling
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            const content = document.querySelector('.content');
+            const scrollPos = window.scrollY;
+
+            if (scrollPos > content.offsetTop - navbar.clientHeight) {
+                navbar.style.backgroundColor = '#000000'; // Change to your desired color
+            } else {
+                navbar.style.backgroundColor = 'transparent';
+            }
+        });
+    </script>
+    <nav class="navbar">
+        <a href="index.html" class="brand"><b>KINGDOM</b></a>
+        <div class="menu">
+            <a href="about-us.html">About us</a>
+            <a href="radianite.html">Radianite</a>
+            <a href="updates.html">Updates</a>
+        </div>
+    </nav>
+    <div class="content">
+        <h1 class="title" align="center">Radianite</h1>
+        <div class="container">
+            <p class="text">
+                Radianite is an unknown material that come out from an event that change our life which name is First
+                Light. Radianite extracted from mine and then processed and put in the Radianite Box. Radianite is
+                clean, safe source energy, and renewable energy. Radianite has been used to power and augment much of
+                the Earths' technology since its discovery. Radianite is capable of generating enormous amounts of
+                energy, and through the Kingdom Radianite Power Program, we are responsible for powering more than 3/4
+                of the world.
+            </p>
+            <div class="slider-container">
+                <div class="slider" align="center">
+                    <img src="Images/Pure Radianite.png">
+                    <img src="Images/Radianite inserted on an anchor.png">
+                    <img src="Images/Radianite Anchor.png">
+                    <img src="Images/Radianite Boxes.png">
+                </div>
+                <div class="slider-dots">
+                    <span class="dot active" onclick="changeSlide(0)"></span>
+                    <span class="dot" onclick="changeSlide(1)"></span>
+                    <span class="dot" onclick="changeSlide(2)"></span>
+                    <span class="dot" onclick="changeSlide(3)"></span>
+                </div>
+                <p style="padding: 2.5% 0 0 0; margin: 0;" align="center">Step by step how Radianite created</p>
+            </div>
+            <script>
+                //image slider
+                let currentSlide = 0;
+                const slides = document.querySelectorAll(".slider img");
+                const dots = document.querySelectorAll(".dot");
+
+                function showSlide(n) {
+                    if (n < 0) {
+                        currentSlide = slides.length - 1;
+                    } else if (n >= slides.length) {
+                        currentSlide = 0;
+                    }
+
+                    slides.forEach((slide) => {
+                        slide.style.display = "none";
+                    });
+                    dots.forEach((dot) => {
+                        dot.classList.remove("active");
+                    });
+
+                    slides[currentSlide].style.display = "block";
+                    dots[currentSlide].classList.add("active");
+                }
+
+                function changeSlide(n) {
+                    showSlide(currentSlide = n);
+                }
+
+                showSlide(currentSlide);
+            </script>
+        </div>
+        <footer>
+            <div class="link">
+                <p class="copyright">KINGDOM Co. © 2052</p>
+                <a class="link2" href="https://www.facebook.com/PlayVALORANT/">Facebook</a>
+                <a class="link2" href="https://www.instagram.com/playvalorantofficial/" style="margin-left: 3vw; margin-right: 3vw;">Instagram</a>
+                <a class="link2" href="https://twitter.com/PlayVALORANT?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

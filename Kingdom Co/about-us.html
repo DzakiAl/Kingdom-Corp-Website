@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <link rel="icon" type="image/x-icon" href="Images/Kingdom Logo.png">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            animation: fade-in 1s ease-in-out;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .navbar {
+            display: flex;
+            width: 100%;
+            height: 6vw;
+            background-color: transparent;
+            position: fixed;
+            top: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .brand {
+            color: white;
+            font-size: 4vw;
+            text-decoration: none;
+            margin: 1vh 0 1vh 2vw;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+            margin-right: 2%;
+        }
+
+        .menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5vw;
+            margin-left: 1vw;
+            position: relative;
+        }
+
+        .menu a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 0.15vw;
+            background-color: white;
+            transition: width 0.3s;
+        }
+
+        .menu a:hover::before {
+            width: 100%;
+        }
+
+        .title {
+            font-size: 5vw;
+            margin: 45vh 0 45vh 0;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+        }
+
+        .quotes {
+            padding: 38.5vh 0 38.5vh 0;
+            text-align: center;
+            font-size: 5vw;
+        }
+
+        .about-kingdom {
+            text-align: center;
+            padding: 25vh 10% 25vh 10%;
+        }
+
+        .about-kingdom h1 {
+            font-size: 5vw;
+        }
+
+        .about-kingdom p {
+            font-size: 2vw;
+        }
+
+        footer {
+            background-color: black;
+            width: 100%;
+            height: 10vw;
+        }
+
+        .link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            font-size: 1.2vw;
+        }
+
+        .link2 {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .link2:hover {
+            text-decoration: underline;
+        }
+
+        .copyright {
+            font-size: 1.2vw;
+            color: white;
+            margin-right: 3vw;
+        }
+
+        @media (orientation: portrait) and (max-width: 480px) {
+            .navbar {
+                height: 9vw;
+            }
+
+            .brand {
+                font-size: 6vw;
+                margin: 1.5% 1.5% 5%;
+            }
+
+            .menu {
+                margin-right: 2%;
+            }
+
+            .menu a {
+                font-size: 3vw;
+            }
+
+            .title {
+                font-size: 13vw;
+                margin: 46vh 0 49vh 0;
+            }
+
+            footer {
+                height: 25vw;
+            }
+
+            .link2 {
+                font-size: 3vw;
+            }
+
+            .copyright {
+                font-size: 3vw;
+            }
+
+            .quotes {
+                padding: 50vh 5% 50vh 5%;
+                text-align: center;
+                font-size: 6vw;
+            }
+
+            .about-kingdom {
+                text-align: center;
+                padding: 35.5vh 10% 35.5vh 10%;
+            }
+
+            .about-kingdom h1 {
+                font-size: 9vw;
+            }
+
+            .about-kingdom p {
+                font-size: 4vw;
+            }
+        }
+
+        @media (orientation: portrait) and (max-width: 1024px) and (min-width: 480px) {
+            .navbar {
+                height: 10vw;
+            }
+
+            .brand {
+                font-size: 6vw;
+                margin: 1.5% 1.5% 5%;
+            }
+
+            .menu {
+                margin-right: 1%;
+            }
+
+            .menu a {
+                font-size: 3vw;
+            }
+
+            .title {
+                font-size: 13vw;
+                margin: 46vh 0 49vh 0;
+            }
+
+            footer {
+                height: 25vw;
+            }
+
+            .link2 {
+                font-size: 3vw;
+            }
+
+            .copyright {
+                font-size: 3vw;
+            }
+
+            .quotes {
+                padding: 50vh 5% 50vh 5%;
+                text-align: center;
+                font-size: 6vw;
+            }
+
+            .about-kingdom {
+                text-align: center;
+                padding: 30vh 10% 30vh 10%;
+            }
+
+            .about-kingdom h1 {
+                font-size: 9vw;
+            }
+
+            .about-kingdom p {
+                font-size: 4vw;
+            }
+        }
+    </style>
+</head>
+<body background="Images/Kingdoms Tower.png">
+    <script>
+        //change navbar color while scrolling
+        window.addEventListener('scroll', () => {
+        const navbar = document.querySelector('.navbar');
+        const content = document.querySelector('.content');
+        const scrollPos = window.scrollY;
+
+        if (scrollPos > content.offsetTop - navbar.clientHeight) {
+            navbar.style.backgroundColor = '#000000'; // Change to your desired color
+        } else {
+            navbar.style.backgroundColor = 'transparent';
+        }
+        });
+    </script>
+    <nav class="navbar">
+        <a href="index.html" class="brand"><b>KINGDOM</b></a>
+        <div class="menu">
+            <a href="about-us.html">About us</a>
+            <a href="radianite.html">Radianite</a>
+            <a href="updates.html">Updates</a>
+        </div>
+    </nav>
+    <div class="content">
+        <h1 class="title" align="center">About us</h1>
+        <div class="container">
+            <h1 class="quotes">
+                With Radianite, We believe that<br>
+                we can build our world more better
+            </h1>
+            <div class="about-kingdom">
+                <h1>About KINGDOM</h1>
+                <p>
+                    Kingdom Co. is a corporation that manage Radianite in the world. we have been able to make huge
+                    scientific advancements, including new methods for how the planet produces its energy. Kingdom Co.
+                    produce an immense amount of energy, and would end up producing enough to provide for threequarter's
+                    our energy needs.
+                </p>
+            </div>
+        </div>
+        <footer>
+            <div class="link">
+                <p class="copyright">KINGDOM Co. © 2052</p>
+                <a class="link2" href="https://www.facebook.com/PlayVALORANT/">Facebook</a>
+                <a class="link2" href="https://www.instagram.com/playvalorantofficial/"
+                    style="margin-left: 3vw; margin-right: 3vw;">Instagram</a>
+                <a class="link2"
+                    href="https://twitter.com/PlayVALORANT?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">Twitter</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
